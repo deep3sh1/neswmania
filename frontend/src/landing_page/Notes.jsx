@@ -18,7 +18,7 @@ function Notes() {
     try {
 
       const res = await axios.get(
-        "http://localhost:5000/api/notes",
+        `${import.meta.env.VITE_API_URL}/api/notes`,
         {
           headers: {
             Authorization: token,
@@ -41,7 +41,7 @@ function Notes() {
     try {
 
       await axios.post(
-        "http://localhost:5000/api/notes",
+        `${import.meta.env.VITE_API_URL}/api/notes`,
         {
           title,
           content,
@@ -71,7 +71,7 @@ function Notes() {
     try {
 
       await axios.delete(
-        `http://localhost:5000/api/notes/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/notes/${id}`,
         {
           headers: {
             Authorization: token,
