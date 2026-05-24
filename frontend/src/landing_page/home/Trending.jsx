@@ -12,6 +12,8 @@ function ExploreSection() {
 
       try {
 
+        console.log(import.meta.env.VITE_API_URL);
+
         const response = await axios.get(
           `${import.meta.env.VITE_API_URL}/api/news`
         );
