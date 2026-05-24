@@ -84,7 +84,7 @@ function List() {
         </div>
 
         <a
-          href="#"
+          href="/"
           className="text-decoration-none text-dark fw-semibold"
         >
           View all →

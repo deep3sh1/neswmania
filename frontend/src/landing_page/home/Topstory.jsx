@@ -44,12 +44,6 @@ function Topstory() {
           Top Stories
         </h1>
 
-        <a
-          href="#"
-          className="text-decoration-none fw-semibold text-dark see-all-btn"
-        >
-          See all →
-        </a>
 
       </div>
 
