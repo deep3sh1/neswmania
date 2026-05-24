@@ -30,8 +30,6 @@ function Navbar() {
 
         const data = await res.json();
 
-        console.log(data);
-
         setAllNews(Array.isArray(data) ? data : []);
 
       } catch (error) {
@@ -102,13 +100,13 @@ function Navbar() {
 
   return (
 
-    <nav className="navbar navbar-expand-lg bg-white border-bottom py-3 px-4 position-relative">
+    <nav className="navbar navbar-expand-lg bg-white border-bottom py-3 px-3">
 
-      <div className="container-fluid ms-4">
+      <div className="container-fluid">
 
         {/* LOGO */}
         <Link
-          className="navbar-brand fw-bold fs-3 text-decoration-none  "
+          className="navbar-brand fw-bold fs-3 text-decoration-none"
           to="/"
         >
           News<span className="text-danger">Verse</span>
@@ -124,10 +122,14 @@ function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div className="collapse navbar-collapse" id="navbarNav">
+        {/* NAVBAR CONTENT */}
+        <div
+          className="collapse navbar-collapse align-items-center"
+          id="navbarNav"
+        >
 
           {/* LINKS */}
-          <ul className="navbar-nav ms-4">
+          <ul className="navbar-nav ms-3">
 
             <li className="nav-item">
 
@@ -140,7 +142,7 @@ function Navbar() {
 
             </li>
 
-            <li className="nav-item ms-3">
+            <li className="nav-item ms-lg-3">
 
               <Link
                 className="nav-link fw-semibold text-secondary"
@@ -154,7 +156,7 @@ function Navbar() {
           </ul>
 
           {/* CREATE NOTES BUTTON */}
-          <div className="d-flex align-items-center ms-4">
+          <div className="d-flex align-items-center ms-lg-4 mt-3 mt-lg-0">
 
             {user ? (
 
@@ -220,7 +222,13 @@ function Navbar() {
           </div>
 
           {/* SEARCH */}
-          <div className="position-relative ms-auto w-50 pe-5">
+          <div
+            className="position-relative ms-lg-auto mt-3 mt-lg-0"
+            style={{
+              width: "350px",
+              maxWidth: "100%",
+            }}
+          >
 
             <input
               className="form-control rounded-pill px-4 py-2"
@@ -302,7 +310,7 @@ function Navbar() {
           {/* USER */}
           {user ? (
 
-            <div className="d-flex align-items-center">
+            <div className="d-flex align-items-center ms-lg-4 mt-3 mt-lg-0">
 
               {/* USERNAME */}
               <span
@@ -344,7 +352,7 @@ function Navbar() {
 
           ) : (
 
-            <div className="d-flex">
+            <div className="d-flex ms-lg-4 mt-3 mt-lg-0">
 
               {/* SIGNUP */}
               <Link
