@@ -132,7 +132,7 @@ function Notes() {
 
         {notes.map((note) => (
 
-          <div className="col-md-4 mb-4" key={note._id}>
+          <div className="col-12 col-md-4 mb-4" key={note._id}>
 
             <div className="card p-3 h-100">
 

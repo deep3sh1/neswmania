@@ -59,16 +59,16 @@ function Login() {
 
   return (
     <div
-      className="container-fluid d-flex justify-content-center align-items-center"
+      className="container-fluid d-flex justify-content-center align-items-center px-3"
       style={{
         minHeight: "100vh",
         backgroundColor: "#f7f5f3",
       }}
     >
       <div
-        className="bg-white p-5 shadow-sm"
+        className="bg-white p-4 p-md-5 shadow-sm w-100"
         style={{
-          width: "420px",
+          maxWidth: "420px",
           borderRadius: "24px",
           border: "1px solid #e5e5e5",
         }}

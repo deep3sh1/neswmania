@@ -20,7 +20,7 @@ function ExploreSection() {
 
         console.log(response.data);
 
-        setNewsData(response.data);
+        setNewsData(Array.isArray(response.data) ? response.data : []);
 
       } catch (error) {
 
@@ -40,18 +40,18 @@ function ExploreSection() {
 
   return (
 
-    <div className="container-fluid mt-5 ps-5 pe-5">
+    <div className="container-fluid mt-5 px-3 px-md-5">
 
       <div className="row">
 
         {/* LEFT SIDE */}
-        <div className="col-lg-2">
+        <div className="col-12 col-lg-2 mb-4 mb-lg-0">
 
           <h6 className="text-uppercase fw-bold text-secondary mb-4">
             Newspapers
           </h6>
 
-          <div className="d-flex flex-column gap-3">
+          <div className="d-flex flex-row flex-lg-column flex-wrap gap-2 gap-lg-3">
 
             {[
               "The Hindu",
@@ -88,7 +88,7 @@ function ExploreSection() {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="col-lg-10">
+        <div className="col-12 col-lg-10">
 
           <div className="d-flex align-items-center mb-5">
 
@@ -114,7 +114,7 @@ function ExploreSection() {
 
               newsData.slice(0, 8).map((article, index) => (
 
-                <div className="col-lg-3" key={index}>
+                <div className="col-12 col-md-6 col-lg-3" key={index}>
 
                   <div
                     className="border rounded-4 p-3 h-100 shadow-sm news-card"

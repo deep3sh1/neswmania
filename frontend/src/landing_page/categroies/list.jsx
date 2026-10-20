@@ -66,7 +66,7 @@ function List() {
 
   return (
 
-    <div className="container-fluid mt-5 ps-5 pe-5">
+    <div className="container-fluid mt-5 px-3 px-md-5">
 
       {/* Heading */}
       <div className="d-flex justify-content-between align-items-center mb-5">
@@ -98,7 +98,7 @@ function List() {
         {categories.map((item, index) => (
 
           <div
-            className="col-lg-3 col-md-6"
+            className="col-12 col-md-6 col-lg-3"
             key={index}
           >
 

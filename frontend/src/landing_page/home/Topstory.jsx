@@ -31,7 +31,7 @@ function Topstory() {
 
   return (
 
-    <div className="container-fluid mt-4 overflow-hidden ps-5 pe-5">
+    <div className="container-fluid mt-4 overflow-hidden px-3 px-md-5">
 
       {/* TOP HEADING */}
       <h6 className="text-danger fw-bold text-uppercase">
